@@ -401,7 +401,9 @@ windows:vs2019:deploy:
     - pwd
     - echo $env:CONDA_INSTALL_LOCN
     - Start-Process "cmd.exe" "/c .\contrib\packaging-python\gitlab\build_pychrono.bat >outputfile.txt" -Wait
-    #- Start-Sleep -s 600
+    - $env:Path += ";$env:CONDA_INSTALL_LOCN\Scripts"
+    - cmd /k "activate base & powershell"
+    - conda build .\contrib\packaging-python\conda --python=3.7 --no-remove-work-dir --dirty
     - get-content outputfile.txt
     - mkdir ./logs
     - Copy-Item "./outputfile.txt" -Destination "./logs/"
