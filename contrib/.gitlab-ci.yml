@@ -405,7 +405,6 @@ windows:vs2019:deploy:
     - get-content outputfile.txt
     - mkdir ./logs
     - Copy-Item "./outputfile.txt" -Destination "./logs/"
-    - Copy-Item "C:/Users/builder/Anaconda3/conda-bld/pychrono_1582022097892/work/build/CMakeFiles/CMakeOutput.log" -Destination "./logs/"
     - cp -r  "C:/Users/builder/Anaconda3/conda-bld/pychrono_1582022097892/work/build/" ./logs/
 
   environment:
