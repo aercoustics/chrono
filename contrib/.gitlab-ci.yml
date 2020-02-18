@@ -403,6 +403,7 @@ windows:vs2019:deploy:
     - Start-Process "cmd.exe" "/c .\contrib\packaging-python\gitlab\build_pychrono.bat >outputfile.txt" -Wait
     #- Start-Sleep -s 600
     - get-content outputfile.txt
+    - mkdir ./logs
     - Copy-Item "./outputfile.txt" -Destination "./logs/"
     - Copy-Item "C:/Users/builder/Anaconda3/conda-bld/pychrono_1582022097892/work/build/CMakeFiles/CMakeOutput.log" -Destination "./logs/"
 
