@@ -408,7 +408,7 @@ windows:vs2019:deploy:
     - Start-Process "cmd.exe" "/c .\contrib\packaging-python\gitlab\build_pychrono.bat >outputfile.txt" -Wait
     - get-content outputfile.txt
     - Copy-Item "./outputfile.txt" -Destination "./logs/"
-    - cp -r  "C:/Users/builder/Anaconda3/conda-bld/pychrono_1582022097892/work/build/" ./logs/
+    #- cp -r  "C:/Users/builder/Anaconda3/conda-bld/pychrono_1582022097892/work/build/" ./logs/
 
   environment:
     name: pychrono-win64
