@@ -38,7 +38,7 @@ cmake -G "%CMAKE_GENERATOR%" ^
  -DMKL_INCLUDE_DIR="%CONDA_INSTALL_LOCN%"\Library\include ^
  -DMKL_RT_LIBRARY="%CONDA_INSTALL_LOCN%"\Library\lib\mkl_rt.lib ^
  -DPYCHRONO_DATA_PATH="..\..\..\..\Library\data" ^
- ..
+ .. >> "%LOG_DIR%"\cmakeconfiglog.txt 2>&1
 if errorlevel 1 exit 1
  
 REM Build step 
