@@ -11,8 +11,8 @@ call conda install jinja2 --yes
 call conda install ninja --yes
 call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
 call conda build .\contrib\packaging-python\conda --python=3.7 --no-remove-work-dir --dirty
-call anaconda --token "%ANACONDA_TOKEN%" upload "%CONDA_INSTALL_LOCN%"\conda-bld\win-64\pychrono*.bz2
+call anaconda --token "%ANACONDA_TOKEN%" upload "%CONDA_INSTALL_LOCN%"\conda-bld\win-64\pychrono*.bz2 --force -label develop
 call conda build purge  timeout /t 240
 call conda build .\contrib\packaging-python\conda --python=3.6 --no-remove-work-dir --dirty
-call anaconda --token "%ANACONDA_TOKEN%" upload "%CONDA_INSTALL_LOCN%"\conda-bld\win-64\pychrono*.bz2
+call anaconda --token "%ANACONDA_TOKEN%" upload "%CONDA_INSTALL_LOCN%"\conda-bld\win-64\pychrono*.bz2 --force -label develop
 echo End Reached
