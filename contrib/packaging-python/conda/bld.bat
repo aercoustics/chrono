@@ -8,7 +8,7 @@ set MY_PY_VER=%PY_VER:.=%
 REM set env variables needed by MKL
 set MKL_INTERFACE_LAYER = LP64
 set MKL_THREADING_LAYER = INTEL
-
+set CONFIGURATION=Release
 REM Configure step
 cmake -G "Ninja" ^
  --log-level=VERBOSE ^
