@@ -11,5 +11,5 @@ call conda install jinja2 --yes
 call conda install ninja --yes
 call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
 call conda build .\contrib\packaging-python\conda --python=3.7 --no-remove-work-dir --dirty
-call anaconda --token "%ANACONDA_TOKEN%" upload "%CONDA_INSTALL_LOCN%"\conda-bld\pychrono-4.0.0*.bz2
-echo "End Reached"
+call anaconda --token "%ANACONDA_TOKEN%" upload "%CONDA_INSTALL_LOCN%"\conda-bld\win-64\pychrono*.bz2
+echo End Reached
