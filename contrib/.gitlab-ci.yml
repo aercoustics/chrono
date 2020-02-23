@@ -400,8 +400,8 @@ windows:vs2019:deploy:
     - dir
     - pwd
     - mkdir ./logs
-    - Invoke-WebRequest -Uri http://www.projectchrono.org/assets/downloads/libiomp5md.lib  -OutFile ./libiomp5md.lib
-    - Copy-Item "./libiomp5md.lib" -Destination Join-Path -Path $Env:CONDA_INSTALL_LOCN -ChildPath "\Library\lib"
+    - $libiomppth=Join-Path -Path $Env:CONDA_INSTALL_LOCN -ChildPath "\Library\lib\libiomp5md.lib"
+    - Invoke-WebRequest -Uri http://www.projectchrono.org/assets/downloads/libiomp5md.lib  -OutFile $libiomppth
     - $Env:LOG_DIR=Join-Path -Path $pwd -ChildPath "\logs"
     #- $Env:CONDA_INSTALL_LOCN= "C:\Users\builder\Miniconda3"
     #- Invoke-WebRequest -Uri https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe  -OutFile ./Miniconda3-latest-Windows-x86_64.exe >temp.txt
