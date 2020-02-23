@@ -33,9 +33,10 @@ cmake -G "Ninja" ^
  -DENABLE_MODULE_CASCADE=OFF ^
  -DCASCADE_INCLUDE_DIR="%CONDA_INSTALL_LOCN%"\Library\include\oce ^
  -DCASCADE_LIBDIR="%CONDA_INSTALL_LOCN%"\Library\lib ^
- -DENABLE_MODULE_MKL=OFF ^
+ -DENABLE_MODULE_MKL=ON ^
  -DMKL_INCLUDE_DIR="%CONDA_INSTALL_LOCN%"\Library\include ^
  -DMKL_RT_LIBRARY="%CONDA_INSTALL_LOCN%"\Library\lib\mkl_rt.lib ^
+ -DMKL_RT_LIBRARY="%CONDA_INSTALL_LOCN%"\Library\lib\libiomp5md.lib ^
  -DPYCHRONO_DATA_PATH="..\..\..\..\Library\data" ^
  .. >> "%LOG_DIR%"\cmakeconfiglog.txt 2>&1
 if errorlevel 1 exit 1
