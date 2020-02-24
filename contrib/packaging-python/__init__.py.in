@@ -35,5 +35,5 @@ except:
 # instead of 
 #   import pychrono.core	
 from .core import *
-
+#this is the right one
 SetChronoDataPath('@PYCHRONO_DATA_PATH@/')

@@ -204,7 +204,7 @@ set(PYCHRONO_DATA_PATH "../../../data" CACHE PATH "Path to Chrono data files (fo
 # Generate the __init__.py file using substitution variables and place it in a temporary place
 configure_file(${CMAKE_SOURCE_DIR}/contrib/packaging-python/__init__.py.in
                ${PROJECT_BINARY_DIR}/chrono_python/__init__.py)
-
+message(STATUS "Pychrono path ${PYCHRONO_DATA_PATH}")
 # Copy the __init__.py file in the package
 add_custom_command(TARGET ${SWIG_MODULE_${CHPY_CORE}_REAL_NAME}
                    POST_BUILD
