@@ -20,6 +20,7 @@
 #include "chrono/motion_functions/ChFunction_Sequence.h"
 #include "chrono/motion_functions/ChFunction_Sigma.h"
 #include "chrono/motion_functions/ChFunction_Sine.h"
+#include "chrono/motion_functions/ChFunction_Setpoint.h"
 
 	// Helper function that will be put in C++ wrapper and that will
 	// be later used by %typemap in order to do downcasting to proper Python
@@ -64,6 +65,8 @@ SWIGRUNTIME PyObject* DowncastChFunction(chrono::ChFunction* out)
 			return SWIG_NewPointerObj(SWIG_as_voidptr(out), SWIGTYPE_p_chrono__ChFunction_Sigma, 0 |  0 );
 		else if ( typeid(*out)==typeid(chrono::ChFunction_Sine) )
 			return SWIG_NewPointerObj(SWIG_as_voidptr(out), SWIGTYPE_p_chrono__ChFunction_Sine, 0 |  0 );
+		else if ( typeid(*out)==typeid(chrono::ChFunction_Setpoint) )
+			return SWIG_NewPointerObj(SWIG_as_voidptr(out), SWIGTYPE_p_chrono__ChFunction_Setpoint, 0 |  0 );
 		else
 			return SWIG_NewPointerObj(SWIG_as_voidptr(out), SWIGTYPE_p_chrono__ChFunction, 0 |  0 );
    } 
@@ -100,6 +103,7 @@ SWIGRUNTIME PyObject* DowncastChFunction(chrono::ChFunction* out)
 %include "../chrono/motion_functions/ChFunction_Sequence.h"
 %include "../chrono/motion_functions/ChFunction_Sigma.h"
 %include "../chrono/motion_functions/ChFunction_Sine.h"
+%include "../chrono/motion_functions/ChFunction_Setpoint.h"
 
 // The following is clean but may cause code bloat...
 

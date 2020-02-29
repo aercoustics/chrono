@@ -159,7 +159,8 @@ using namespace chrono::fea;
 %shared_ptr(chrono::ChFunction_Sequence)
 %shared_ptr(chrono::ChFunction_Sigma)
 %shared_ptr(chrono::ChFunction_Sine)
-
+%shared_ptr(chrono::ChFunction_Setpoint)
+%shared_ptr(chrono::ChFunction_SetpointCallback)
 
 %shared_ptr(chrono::collision::ChCollisionModel)
 %shared_ptr(chrono::ChPhysicsItem)
@@ -525,6 +526,8 @@ using namespace chrono::fea;
 %DefSharedPtrDynamicDowncast(chrono,ChFunction, ChFunction_Sequence)
 %DefSharedPtrDynamicDowncast(chrono,ChFunction, ChFunction_Sigma)
 %DefSharedPtrDynamicDowncast(chrono,ChFunction, ChFunction_Sine)
+%DefSharedPtrDynamicDowncast(chrono,ChFunction, ChFunction_Setpoint)
+%DefSharedPtrDynamicDowncast(chrono,ChFunction, ChFunction_SetpointCallback)
 
 %DefSharedPtrDynamicDowncast(chrono,ChPhysicsItem, ChShaft)
 %DefSharedPtrDynamicDowncast(chrono,ChPhysicsItem, ChShaftsBody)
